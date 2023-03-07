@@ -1,3 +1,11 @@
+:root {
+  --main-white: #eaebed;
+  --cerulean: #006989;
+  --writing-gray: #a3bac3;
+  --cerulean-secondary: #007090;
+  --moonstone: #01a7c2;
+}
+
 /*
 COLORS:
 
@@ -263,5 +271,37 @@ a:hover .fa-arrow-right {
 }
 
 .project {
-  background-image: gradient(to right bottom, #800808, #f90303);
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, #09a17687, #02683fd3), url(../img/Rando/RiverWithForest.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.header-project {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-container {
+  color:#036046;
+}
+
+.project-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+video {
+  aspect-ratio: 16/9;
+  width: 30rem;
+}
+
+video:hover {
+  transition-duration: 0.5s;
+ scale: 1.2;
 }
