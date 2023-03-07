@@ -218,7 +218,7 @@ body {
   font-size: 60px;
 }
 
-@keyframes bounce {
+@keyframes bounceRight {
   0% {
     transform: translateX(0);
   }
@@ -232,7 +232,7 @@ body {
 }
 
 a:hover .fa-arrow-right {
-  animation-name: bounce;
+  animation-name: bounceRight;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
@@ -278,6 +278,37 @@ a:hover .fa-arrow-right {
   position: relative;
 }
 
+.project-redirection-left {
+  position: absolute;
+  bottom: 4rem;
+  left: 5rem;
+}
+
+.fa-arrow-left {
+  color: #eaebed;
+  font-size: 60px;
+}
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+a:hover .fa-arrow-left {
+  animation-name: bounceRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
 .header-project {
   text-align: center;
   position: absolute;
@@ -287,13 +318,24 @@ a:hover .fa-arrow-right {
   text-align: center;
 }
 
-.project-container {
-  color:#036046;
+. .project-container {
+  color: #036046;
 }
 
 .project-title {
   text-align: center;
   margin-top: 2rem;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.text-scarlatta-fortuna {
+  font-size: 20px;
+  padding: 2rem;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 video {
@@ -303,5 +345,5 @@ video {
 
 video:hover {
   transition-duration: 0.5s;
- scale: 1.2;
+  scale: 1.2;
 }
