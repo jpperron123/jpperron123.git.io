@@ -1,0 +1,264 @@
+/*
+COLORS:
+
+Anti-Flash White: #EAEBED
+Cerulean: #006989
+Cadet gray: #A3BAC3
+Cerulean pale: #007090
+Moonstone: #01A7C2
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #01a7c2c2, #006989c2), url(../img/Rando/JonqLake.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #eaebed;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #eaebed;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #eaebed;
+}
+
+.btn-white:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+.presentation-wrapper {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.presentation-description {
+  color: #006989;
+  font-weight: 400;
+  font-size: 32px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.separator {
+  height: 45vh;
+  background-image: linear-gradient(to right bottom, #01a7c2c2, #006989c2), url(../img/Rando/JonqLake.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+  position: relative;
+}
+
+.fa-arrow-right {
+  color: #eaebed;
+  font-size: 60px;
+  position: absolute;
+  bottom: 4rem;
+  right: 6rem;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(30px);
+  }
+}
+
+.fa-arrow-right:hover {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.language {
+  background-color: #a3bac3;
+  color: #eaebed;
+  width: 100%;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.language-title,
+.language-name {
+  color: #006989;
+  margin-left: 40%;
+  font-weight: 400;
+  font-size: 32px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.language-name-right {
+  margin-left: 30%;
+  margin-bottom: 1%;
+  height: 50%;
+}
+
+.language-name-left {
+  margin-left: 60%;
+  margin-bottom: 1%;
+  width: 50%;
+}
+
+.project {
+  background-image: gradient(to right bottom, #800808, #f90303);
+}
