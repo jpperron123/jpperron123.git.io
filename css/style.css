@@ -199,30 +199,33 @@ body {
   position: relative;
 }
 
-.fa-arrow-right {
-  color: #eaebed;
-  font-size: 60px;
+.project-redirection {
   position: absolute;
   bottom: 4rem;
   right: 6rem;
 }
 
+.fa-arrow-right {
+  color: #eaebed;
+  font-size: 60px;
+}
+
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
   100% {
     transform: translateX(0);
   }
-  40% {
-    transform: translateX(30px);
-  }
 }
 
-.fa-arrow-right:hover {
+a:hover .fa-arrow-right {
   animation-name: bounce;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
 }
